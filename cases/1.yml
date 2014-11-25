@@ -1,0 +1,15 @@
+case: 1
+name: Approved
+# amount += 1
+resultCode: APPROVED
+refusalReason:
+states:
+  - TENDER_CREATED
+  - CARD_INSERTED
+  - ASK_SIGNATURE
+  - CHECK_SIGNATURE
+  - :SIGNATURE_CHECKED # modifyState, SignatureVerified
+  - PRINT_RECEIPT
+  - :RECEIPT_PRINTED # modifyState, ReceiptPrinted
+  - APPROVED
+  - CARD_REMOVED

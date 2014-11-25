@@ -1,0 +1,13 @@
+case: 5
+name: Acquirer_Declined
+# amount += 123
+resultCode: DECLINED
+refusalReason: 123 CardDeclined - offline declined
+states:
+  - TENDER_CREATED
+  - CARD_INSERTED
+  - ASK_SIGNATURE
+  - CHECK_SIGNATURE
+  - :SIGNATURE_CHECKED # modifyState, SignatureVerified
+  - DECLINED
+  - CARD_REMOVED

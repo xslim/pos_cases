@@ -1,0 +1,13 @@
+case: 18
+name: Error
+# amount += 130
+resultCode: ERROR
+refusalReason: 200 TechnicalProblem - EMV error
+states:
+  - TENDER_CREATED
+  - CARD_INSERTED
+  - ASK_SIGNATURE
+  - CHECK_SIGNATURE
+  - :SIGNATURE_CHECKED # modifyState, SignatureVerified
+  - ERROR
+  - CARD_REMOVED

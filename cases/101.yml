@@ -1,0 +1,18 @@
+case: 10001
+name: Approved
+# amount += 1
+resultCode: APPROVED
+refusalReason:
+states:
+  - TENDER_CREATED
+  - CARD_INSERTED
+  - WAIT_FOR_PIN
+  - PIN_DIGIT_ENTERED # *
+  - PIN_DIGIT_ENTERED # **
+  - PIN_DIGIT_ENTERED # ***
+  - PIN_DIGIT_ENTERED # ****
+  - PIN_ENTERED
+  - PRINT_RECEIPT
+  - :RECEIPT_PRINTED # modifyState, ReceiptPrinted
+  - APPROVED
+  - CARD_REMOVED
