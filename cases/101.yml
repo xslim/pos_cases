@@ -1,6 +1,6 @@
-case: 10001
+case: 101
+amount: 10101
 name: Approved
-# amount += 1
 resultCode: APPROVED
 refusalReason:
 states:

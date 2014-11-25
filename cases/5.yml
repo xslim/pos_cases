@@ -1,6 +1,6 @@
 case: 5
+amount: 1123
 name: Acquirer_Declined
-# amount += 123
 resultCode: DECLINED
 refusalReason: 123 CardDeclined - offline declined
 states:

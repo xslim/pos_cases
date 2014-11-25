@@ -1,6 +1,6 @@
 case: 18
+amount: 1130
 name: Error
-# amount += 130
 resultCode: ERROR
 refusalReason: 200 TechnicalProblem - EMV error
 states:
