@@ -1,0 +1,19 @@
+case: 0
+name: Default implementation
+description:
+resultCode: APPROVED
+refusalReason:
+cardAppToBeSelected:
+states:
+  - TENDER_CREATED
+  - CARD_INSERTED
+  - WAIT_FOR_PIN
+  - PIN_DIGIT_ENTERED # *
+  - PIN_DIGIT_ENTERED # **
+  - PIN_DIGIT_ENTERED # ***
+  - PIN_DIGIT_ENTERED # ****
+  - PIN_ENTERED
+  - PRINT_RECEIPT
+  - :RECEIPT_PRINTED # modifyState, ReceiptPrinted
+  - APPROVED
+  - CARD_REMOVED
