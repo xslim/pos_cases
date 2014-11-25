@@ -6,7 +6,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://gitlab.is.adyen.com/development/pos_cases.git"
+    "url": "https://github.com/xslim/pos_cases"
   },
   "main": "pos_cases.js",
   "scripts": {
