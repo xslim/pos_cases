@@ -1,0 +1,14 @@
+{
+  "name": "pos_cases",
+  "version": "0.0.2",
+  "description": "POS Test cases",
+  "author": "Taras Kalapun",
+  "private": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha": "*",
+    "js-yaml": "*"
+  }
+}
