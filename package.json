@@ -4,6 +4,11 @@
   "description": "POS Test cases",
   "author": "Taras Kalapun",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xslim/pos_cases"
+  },
+  "main": "pos_cases.js",
   "scripts": {
     "test": "mocha"
   },
