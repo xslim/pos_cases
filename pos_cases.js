@@ -44,6 +44,10 @@ module.exports = {
     return this.cases;
   },
 
+  numLoadedCases: function() {
+    return Object.keys(this.cases).length
+  },
+
   isFinalState: function(state) {
     if (arrayContains(state, ['APPROVED', 'DECLINED', 'CANCELLED', 'ERROR'])) {
       return true;
@@ -56,5 +60,31 @@ module.exports = {
       return true;
     }
     return false;
+  },
+
+  parseState: function(state) {
+    var modifyState = false;
+    var value = null;
+    var values = [];
+
+    if (state.indexOf(':') === 0) {
+      modifyState = true;
+      state = state.substring(1)
+    }
+
+    if (state.indexOf(' ') > -1) {
+      var res = state.split(' ')
+      state = res[0]
+      res.shift();
+      value = res[0]
+      values = res;
+    }
+
+    return {
+      state:  state,
+      modify: modifyState,
+      value:  value,
+      values: values
+    }
   }
 }

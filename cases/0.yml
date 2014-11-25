@@ -9,12 +9,15 @@ states:
   - TENDER_CREATED
   - CARD_INSERTED
   - WAIT_FOR_PIN
-  - PIN_DIGIT_ENTERED # *
-  - PIN_DIGIT_ENTERED # **
-  - PIN_DIGIT_ENTERED # ***
-  - PIN_DIGIT_ENTERED # ****
+  - PIN_DIGIT_ENTERED 1 # *
+  - PIN_DIGIT_ENTERED 2 # **
+  - PIN_DIGIT_ENTERED 3 # ***
+  - PIN_DIGIT_ENTERED 4 # ****
   - PIN_ENTERED
   - PRINT_RECEIPT
   - :RECEIPT_PRINTED # modifyState, ReceiptPrinted
   - APPROVED
   - CARD_REMOVED
+
+shopperConfig:
+  numberOfWrongPins: 0

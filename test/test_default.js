@@ -32,4 +32,10 @@ describe('Loading default case', function(){
     assert(case0.name == 'Default implementation')
   });
 
+  it('Knows total loaded cases',function() {
+    pos_cases.loadAll();
+
+    assert(Object.keys(pos_cases.cases).length == pos_cases.numLoadedCases())
+  });
+
 });
