@@ -2,6 +2,10 @@ var path = require('path'),
     fs = require('fs'),
     yaml = require('js-yaml');
 
+function arrayContains(needle, arrhaystack) {
+    return (arrhaystack.indexOf(needle) > -1);
+}
+
 module.exports = {
   cases: {},
 
@@ -36,7 +40,21 @@ module.exports = {
       var file = files[k]
       this.loadCase(file);
     }
-    console.log("Loaded %d cases", Object.keys(this.cases).length);
+    //console.log("Loaded %d cases", Object.keys(this.cases).length);
     return this.cases;
+  },
+
+  isFinalState: function(state) {
+    if (arrayContains(state, ['APPROVED', 'DECLINED', 'CANCELLED', 'ERROR'])) {
+      return true;
+    }
+    return false;
+  },
+
+  isErrorState: function(state) {
+    if (arrayContains(state, ['DECLINED', 'CANCELLED', 'ERROR'])) {
+      return true;
+    }
+    return false;
   }
 }
